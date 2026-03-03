@@ -1,12 +1,12 @@
 % HW03_Martin_kinematics.m
-% Generates gabth_PCM.m and Vsab_PCM.m via symbolic to numeric
-% using matlabFunction
+% Generates gabth_PCM.m and Vsab_PCM.m via symbolic derivation
+% using matlabFunction for the 1-DOF manipulator from Figure 1.
 %
 % Dimensions:
-%   d0 = 3.1 in   
-%   d1 = 1.5 in   
-%   d2 = 2.4 in   
-%   d3 = 3.3 in   
+%   d0 = 3.1 in   (base x-offset to joint axis)
+%   d1 = 1.5 in   (height of joint axis)
+%   d2 = 2.4 in   (arm length, joint to frame B)
+%   d3 = 3.3 in   (frame B to end-effector, along B's x-axis)
 
 clear all; clc; close all;
 addpath("ME-0460_Kinematics\Functions")
