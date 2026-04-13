@@ -8,16 +8,16 @@
 // ===== SERVO CONFIGURATION =====
 Servo servo_2;
 const int SERVO_PIN = 5;        // PWM pin for servo (can use 3, 9, 10, or 11)
-const int MIN_PULSE = 553;      // Minimum pulse width in microseconds (you should adjust this)
-const int MAX_PULSE = 2500;     // Maximum pulse width in microseconds (you should adjust this)
-const int START_POSITION = 1533; // Starting position (approximately center) (You should adjust this for each servo)
+const int MIN_PULSE = 500;      // Minimum pulse width in microseconds (you should adjust this)
+const int MAX_PULSE = 2520;     // Maximum pulse width in microseconds (you should adjust this)
+const int START_POSITION = 1523; // Starting position (approximately center) (You should adjust this for each servo)
 
 // ===== CALIBRATION COEFFICIENTS =====
 // TODO: After collecting data and performing curve fitting, update these values
 // For linear fit: angle = SLOPE * microseconds + INTERCEPT
 // For quadratic fit: angle = COEF_A * microseconds^2 + COEF_B * microseconds + COEF_C
-const float SLOPE = 0.0909;      // Replace with your fitted slope (deg/μs)
-const float INTERCEPT = -52.7;  // Replace with your fitted intercept (deg)
+const float SLOPE = 0.097;      // Replace with your fitted slope (deg/μs)
+const float INTERCEPT = -48.44;  // Replace with your fitted intercept (deg)
 
 // ===== PROGRAM VARIABLES =====
 int current_position_us = START_POSITION;  // Current commanded position in microseconds

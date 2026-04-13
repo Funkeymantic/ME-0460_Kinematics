@@ -22,12 +22,12 @@ const int MIN_US_2 = 473;
 const int MAX_US_2 = 2473;
 const int MIN_US_3 = 553;
 const int MAX_US_3 = 2500;
-const int MIN_US_4 = 700;
-const int MAX_US_4 = 2173;
+const int MIN_US_4 = 1600;
+const int MAX_US_4 = 2400;
 
 // ===== CALIBRATION COEFFICIENTS (from HW A linear fit: angle = SLOPE*us + INTERCEPT) =====
-const float SLOPE_1     = 0.0909f;
-const float INTERCEPT_1 = -52.7f;
+const float SLOPE_1     = 0.097f;
+const float INTERCEPT_1 = -48.44f;
 const float SLOPE_2     = 0.0909f;
 const float INTERCEPT_2 = -52.7f;
 const float SLOPE_3     = 0.0909f;
@@ -37,10 +37,10 @@ const float INTERCEPT_4 = -52.7f;
 
 // ===== HOME POSITION OFFSETS (from Part 2 physical calibration) =====
 // UPDATE these values after measuring home position in Part 2!
-const int HOME_US_1 = 1570;  // Base     home (µs)  <-- UPDATE
-const int HOME_US_2 = 1473;  // Shoulder home (µs)  <-- UPDATE
-const int HOME_US_3 = 1533;  // Elbow    home (µs)  <-- UPDATE
-const int HOME_US_4 = 1133;  // Gripper  home (µs)  <-- UPDATE
+const int HOME_US_1 = 1523;
+const int HOME_US_2 = 1473;
+const int HOME_US_3 = 1061;
+const int HOME_US_4 = 2000;
 
 // ===== TRAJECTORY TARGET ANGLES (degrees from home = 0°) =====
 // These angles were chosen to produce clear, visible motion.
@@ -146,7 +146,7 @@ void commandAndPrint() {
 // SETUP
 // ============================================================
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(230400);
 
   // Attach servos with hardware pulse limits
   servo1.attach(PIN_BASE,     MIN_US_1, MAX_US_1);
